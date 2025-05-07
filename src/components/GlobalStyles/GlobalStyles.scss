@@ -4,6 +4,7 @@
 :root {
    --primary: #fe2c55;
    --black: #000;
+   --white: #fff;
    --color-text: #333;
    // Default Layout
    --default-layout-header-height: 60px;
@@ -32,7 +33,11 @@ input,
    outline: none;
    border: none;
 }
+button {
+   cursor: pointer;
+}
 a[href] {
-   color: var(--color-text);
+   // color: var(--color-text);
    text-decoration: none;
+   cursor: pointer;
 }

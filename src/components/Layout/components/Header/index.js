@@ -29,6 +29,51 @@ const MENU_ITEMS = [
    {
       icon: <FontAwesomeIcon icon={faEarthAsia} />,
       title: 'Tiếng Việt',
+      children: {
+         title: 'Language',
+         data: [
+            {
+               type: 'language',
+               code: 'vi',
+               title: 'Tiếng Việt',
+            },
+            {
+               type: 'language',
+               code: 'en',
+               title: 'English',
+            },
+            {
+               type: 'language',
+               code: 'fi',
+               title: 'Suomi', // Finland
+            },
+            {
+               type: 'language',
+               code: 'no',
+               title: 'Norsk', // Norway
+            },
+            {
+               type: 'language',
+               code: 'se',
+               title: 'Svenska', // Sweden
+            },
+            {
+               type: 'language',
+               code: 'dk',
+               title: 'Dansk', // Denmark
+            },
+            {
+               type: 'language',
+               code: 'ch',
+               title: 'Schweizerdeutsch', // Switzerland (Swiss German)
+            },
+            {
+               type: 'language',
+               code: 'nl',
+               title: 'Nederlands', // Netherlands
+            },
+         ],
+      },
    },
    {
       icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -49,6 +94,17 @@ function Header() {
          setSearchResult([]);
       }, 0);
    }, []);
+
+   //Handle Logic
+   const handleMenuChange = (menuItem) => {
+      switch (menuItem.type) {
+         case 'language':
+            //Handle change language
+            break;
+         default:
+      }
+   };
+
    return (
       <header className={cx('wrapper')}>
          <div className={cx('inner')}>
@@ -83,7 +139,7 @@ function Header() {
                <Button primary>Log in</Button>
                <Button outline>Register</Button>
 
-               <Menu items={MENU_ITEMS}>
+               <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                   <button className={cx('more-btn')}>
                      <FontAwesomeIcon icon={faEllipsisVertical} />
                   </button>

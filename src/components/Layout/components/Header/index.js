@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
    faCircleQuestion,
    faCircleXmark,
-   faCloudUpload,
    faCoins,
    faEarthAsia,
    faEllipsisVertical,
@@ -28,6 +27,9 @@ import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
+
+import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -172,9 +174,18 @@ function Header() {
                   <>
                      <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                         <button className={cx('action-btn')}>
-                           <FontAwesomeIcon icon={faCloudUpload} />
+                           <UploadIcon />
                         </button>
                      </Tippy>
+                     <button className={cx('action-btn')}>
+                        <NotificationIcon />
+                        {/* Copy_from_tiktok */}
+                        <p className={cx('result-notification')}>17</p>
+                        {/* Copy_from_tiktok */}
+                     </button>
+                     <button className={cx('action-btn-message')}>
+                        <MessageIcon />
+                     </button>
                   </>
                ) : (
                   <>
@@ -184,13 +195,11 @@ function Header() {
                )}
                <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                   {currentUser ? (
-                     <div>
-                        <img
-                           className={cx('user-avatar')}
-                           alt="User_avatar"
-                           src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/453212213_1206786913794514_5858085507630456444_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WelNIUfzxogQ7kNvwH0BknP&_nc_oc=AdmNLNVn--VIcfY3TG28PxaHwaFnvC3u_4mcgUQ7EGw0E4vIwmQR4HOqXTUCcJFoxpc&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=Ke5OiWNFHf3kir3WQo7APQ&oh=00_AfJaPJH_DZTiqzoUTE6SE0LzOxaDY1lw8T2VFO3jWSOWmQ&oe=682872DF"
-                        ></img>
-                     </div>
+                     <Image
+                        className={cx('user-avatar')}
+                        alt="User_avatar"
+                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/453212213_1206786913794514_5858085507630456444_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WelNIUfzxogQ7kNvwH0BknP&_nc_oc=AdmNLNVn--VIcfY3TG28PxaHwaFnvC3u_4mcgUQ7EGw0E4vIwmQR4HOqXTUCcJFoxpc&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=Ke5OiWNFHf3kir3WQo7APQ&oh=00_AfJaPJH_DZTiqzoUTE6SE0LzOxaDY1lw8T2VFO3jWSOWmQ&oe=682872DF"
+                     ></Image>
                   ) : (
                      <div className={cx('wrap-more-btn')}>
                         <button className={cx('more-btn')}>

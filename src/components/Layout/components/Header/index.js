@@ -165,7 +165,7 @@ function Header() {
                      <Image
                         className={cx('user-avatar')}
                         alt="User_avatar"
-                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/453212213_1206786913794514_5858085507630456444_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WelNIUfzxogQ7kNvwH0BknP&_nc_oc=AdmNLNVn--VIcfY3TG28PxaHwaFnvC3u_4mcgUQ7EGw0E4vIwmQR4HOqXTUCcJFoxpc&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=Ke5OiWNFHf3kir3WQo7APQ&oh=00_AfJaPJH_DZTiqzoUTE6SE0LzOxaDY1lw8T2VFO3jWSOWmQ&oe=682872DF"
+                        src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/453212213_1206786913794514_5858085507630456444_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=8gaNE8DD9aYQ7kNvwG7-mi_&_nc_oc=Adn1TCSUHBkg9YyfTMa9tcnSEqZ933Fh9iD4wGna5AYVBSePfy_t92k4Vvctoux_3xYzwH_w5M5YX9MMu0mvoj9o&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=evg47t_eYBd_pTkr1MS0hw&oh=00_AfKFOR482D8iiXI529EnLLfYUFBddB1vFRcOQ3gJZGOTjg&oe=68345D1D"
                      ></Image>
                   ) : (
                      <div className={cx('wrap-more-btn')}>

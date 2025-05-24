@@ -11,6 +11,8 @@ import {
    faUser,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { Link } from 'react-router-dom';
+
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -25,6 +27,7 @@ import Image from '~/components/Image';
 import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
 
 import Search from '../Search';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -131,7 +134,9 @@ function Header() {
       <header className={cx('wrapper')}>
          <div className={cx('inner')}>
             <div className={cx('logo')}>
-               <img className={cx('logo_tiktok')} src={images.tiktok_black} alt="TikTok" />
+               <Link to={routesConfig.home} className={cx('logo-link')}>
+                  <img className={cx('logo_tiktok')} src={images.tiktok_black} alt="TikTok" />
+               </Link>
             </div>
 
             <Search />
@@ -160,7 +165,7 @@ function Header() {
                      <Button primary>Log in</Button>
                   </>
                )}
-               <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+               <Menu hideOnClick={false} items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                   {currentUser ? (
                      <Image
                         className={cx('user-avatar')}

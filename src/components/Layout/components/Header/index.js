@@ -78,6 +78,46 @@ const MENU_ITEMS = [
                code: 'nl',
                title: 'Nederlands', // Netherlands
             },
+            {
+               type: 'language',
+               code: 'vi',
+               title: 'Tiếng Việt',
+            },
+            {
+               type: 'language',
+               code: 'en',
+               title: 'English',
+            },
+            {
+               type: 'language',
+               code: 'fi',
+               title: 'Suomi', // Finland
+            },
+            {
+               type: 'language',
+               code: 'no',
+               title: 'Norsk', // Norway
+            },
+            {
+               type: 'language',
+               code: 'se',
+               title: 'Svenska', // Sweden
+            },
+            {
+               type: 'language',
+               code: 'dk',
+               title: 'Dansk', // Denmark
+            },
+            {
+               type: 'language',
+               code: 'ch',
+               title: 'Schweizerdeutsch', // Switzerland (Swiss German)
+            },
+            {
+               type: 'language',
+               code: 'nl',
+               title: 'Nederlands', // Netherlands
+            },
          ],
       },
    },

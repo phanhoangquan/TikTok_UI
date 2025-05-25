@@ -1,5 +1,5 @@
 function Home() {
-   return <div>Home Page</div>;
+   return <div style={{ height: 2000 }}>Home Page</div>;
 }
 
 export default Home;

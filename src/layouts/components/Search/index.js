@@ -8,7 +8,7 @@ import { useDebounce } from '~/hooks';
 import classNames from 'classnames/bind';
 import { SearchIcon } from '~/components/Icons';
 import styles from './Search.module.scss';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/Services/searchServices';
 
 const cx = classNames.bind(styles);
 

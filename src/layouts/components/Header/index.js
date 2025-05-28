@@ -27,7 +27,7 @@ import Image from '~/components/Image';
 import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
 
 import Search from '../Search';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -174,7 +174,7 @@ function Header() {
       <header className={cx('wrapper')}>
          <div className={cx('inner')}>
             <div className={cx('logo')}>
-               <Link to={routesConfig.home} className={cx('logo-link')}>
+               <Link to={config.routes.home} className={cx('logo-link')}>
                   <img className={cx('logo_tiktok')} src={images.tiktok_black} alt="TikTok" />
                </Link>
             </div>
@@ -207,11 +207,7 @@ function Header() {
                )}
                <Menu hideOnClick={false} items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                   {currentUser ? (
-                     <Image
-                        className={cx('user-avatar')}
-                        alt="User_avatar"
-                        src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-1/453212213_1206786913794514_5858085507630456444_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=8gaNE8DD9aYQ7kNvwG7-mi_&_nc_oc=Adn1TCSUHBkg9YyfTMa9tcnSEqZ933Fh9iD4wGna5AYVBSePfy_t92k4Vvctoux_3xYzwH_w5M5YX9MMu0mvoj9o&_nc_zt=24&_nc_ht=scontent.fdad3-6.fna&_nc_gid=evg47t_eYBd_pTkr1MS0hw&oh=00_AfKFOR482D8iiXI529EnLLfYUFBddB1vFRcOQ3gJZGOTjg&oe=68345D1D"
-                     ></Image>
+                     <Image className={cx('user-avatar')} alt="User_avatar" src={images.avatar}></Image>
                   ) : (
                      <div className={cx('wrap-more-btn')}>
                         <button className={cx('more-btn')}>
